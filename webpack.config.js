@@ -8,19 +8,21 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
-    // libraryTarget: 'commonjs2'
+    filename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
-        exclude: /node_modules/,
+        exclude: /(node_modules|dist)/,
         use: {
           loader: 'babel-loader'
         }
       }
     ]
+  },
+  externals: {
+    'react': 'commonjs react' 
   }
 };
