@@ -1,12 +1,12 @@
 # Web MIDI Hooks
-A simple wrapper around the Web MIDI API using React's Context API to pass MIDI data to components in your React app.
+A React wrapper around the Web MIDI API using the `useContext` hook to pass MIDI data to components in your React app.
 
 ## Getting Started
 There are two main components to this package:
 
-`MidiProvider` - This component collects incoming MIDI data from the Web MIDI API and allows you to pass this data down the component tree without using props.
+`MidiProvider` - This component handles connection to MIDI devices and collects incoming MIDI data using the Web MIDI API. This allows you to pass the incoming messages down the component tree without using props.
 
-`MidiDataContext` - This component is imported in each component you want to recieve the MIDI data.
+`MidiDataContext` - This component should be imported in each component you want to recieve MIDI data. It can be used anywhere in the app, without passing the MIDI data down through props, as it receives its data from the MidiProvider at the top level of your app.
 
 To use in your project follow these steps:
 
