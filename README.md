@@ -13,7 +13,7 @@ To use in your project follow these steps:
 1. In the root file of your React app, typically `index.js`, import `MidiProvider` and wrap it around your React `<App/>` Component as shown below. This component will attempt to establish a connection to a MIDI device on app startup, and subsequently provide data based on incoming MIDI messages.
 
     ```JSX
-    import MidiProvider from './context/MidiProvider';
+    import { MidiProvider } from './context/MidiProvider';
 
     ReactDOM.render(
       <React.StrictMode>
@@ -28,7 +28,7 @@ To use in your project follow these steps:
 
     ```JSX
     import React, { useContext } from 'react';
-    import MidiDataContext from '../context/MidiDataContext';
+    import { MidiDataContext } from '../context/MidiDataContext';
 
     const ExampleComponent = () => {
       const { deviceName, keyData } = useContext(MidiDataContext);
