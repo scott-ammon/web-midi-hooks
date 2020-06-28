@@ -1,6 +1,6 @@
 {
   "name": "web-midi-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React wrapper to pass Web MIDI API data to components using the Context API",
   "main": "dist/index.js",
   "scripts": {
