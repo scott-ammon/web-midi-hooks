@@ -6,7 +6,6 @@ export const NOTE_ON_EVENT = 144;
 export const NOTE_OFF_EVENT = 128;
 export const PITCH_BEND_EVENT = 224;
 export const MODULATION_EVENT = 176;
-export const MIDI_INPUT = "input-0";
 
 // MIDI states
 export const DISCONNECTED = "disconnected";

@@ -16,7 +16,11 @@ export async function setUpMIDIAccess() {
 }
 
 const getMidiInput = (midiAccess) => {
-  const activeInput = midiAccess.inputs.get(Constants.MIDI_INPUT);
+  // Avoids issue of device renaming on different computers, but restricts us to 1 device connected at a time
+  const iter = midiAccess.inputs.keys();
+  const activeInputId = iter.next().value;
+  const activeInput = midiAccess.inputs.get(activeInputId);
+
   const midiInput = activeInput ? activeInput : { errors: Constants.NO_DEVICE_ON_STARTUP_ERROR };
 
   return midiInput;
